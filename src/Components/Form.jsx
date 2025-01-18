@@ -116,21 +116,18 @@ const Form = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="max-w-md w-full">
-       
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center mb-4">
+          {/* <div className="flex items-center justify-center mb-4">
             <LineChart className="h-12 w-12 text-blue-600" />
-          </div>
-          <h1 className="text-2xl font-bold text-gray-900">TradyLytics</h1>
-          <p className="text-gray-600 mt-2">Trade. Analyze. Elevate.</p>
+          </div> */}
+          <h1 className="text-2xl font-bold text-white">TradyLytics</h1>
+          <p className="text-[#a1a1aa] mt-2">Trade. Analyze. Elevate.</p>
         </div>
 
-      
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-        
-          <div className="flex border-b">
+        <div className="bg-black border border-[#27272a] rounded-2xl shadow-xl overflow-hidden">
+          <div className="flex border-b border-[#27272a] ">
             <button
               onClick={() => {
                 setActiveTab("login");
@@ -140,8 +137,8 @@ const Form = () => {
               className={`flex-1 py-4 text-sm font-medium transition-colors
                 ${
                   activeTab === "login"
-                    ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-gray-500 hover:text-gray-700"
+                    ? "text-[#AB20FD] border-b-2 border-[#AB20FD]"
+                    : "text-white hover:text-gray-700"
                 }`}
             >
               Login
@@ -155,23 +152,22 @@ const Form = () => {
               className={`flex-1 py-4 text-sm font-medium transition-colors
                 ${
                   activeTab === "register"
-                    ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-gray-500 hover:text-gray-700"
+                    ? "text-[#AB20FD] border-b-2 border-[#AB20FD]"
+                    : "text-white hover:text-gray-700"
                 }`}
             >
               Register
             </button>
           </div>
 
-         
           {activeTab === "login" && (
             <form onSubmit={handleLogin} className="p-6">
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900">
+                  <h2 className="text-xl font-semibold text-zinc-50">
                     Welcome back
                   </h2>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-[#a1a1aa] mt-1">
                     Enter your credentials to access your account
                   </p>
                 </div>
@@ -186,7 +182,7 @@ const Form = () => {
                       onChange={handleInputChange}
                       placeholder="Email"
                       required
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      className="w-full bg-black text-zinc-50 pl-10 pr-4 py-2 border border-[#27272a] rounded-lg focus:ring-2 focus:ring-[#AB20FD] focus:border-[#27272a] outline-none transition-colors "
                     />
                   </div>
 
@@ -199,7 +195,7 @@ const Form = () => {
                       onChange={handleInputChange}
                       placeholder="Password"
                       required
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      className="w-full bg-black pl-10 text-zinc-50 pr-4 py-2 border border-[#27272a] rounded-lg focus:ring-2 focus:ring-[#AB20FD] focus:border-[#27272a] outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -207,14 +203,14 @@ const Form = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+                  className="w-full bg-[#AB20FD] text-white py-2 rounded-lg hover:bg-[#602184] transition-colors disabled:opacity-50"
                 >
                   {isLoading ? "Logging in..." : "Login"}
                 </button>
 
                 <button
                   type="button"
-                  className="w-full text-sm text-gray-600 hover:text-gray-800"
+                  className="w-full text-sm text-[#a1a1aa] hover:text-gray-800"
                 >
                   Forgot password?
                 </button>
@@ -222,15 +218,14 @@ const Form = () => {
             </form>
           )}
 
-        
           {activeTab === "register" && (
             <form onSubmit={handleRegister} className="p-6">
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900">
+                  <h2 className="text-xl font-semibold text-zinc-50">
                     Create an account
                   </h2>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-[#a1a1aa] mt-1">
                     Join TradyLytics to elevate your trading game
                   </p>
                 </div>
@@ -245,7 +240,7 @@ const Form = () => {
                       onChange={handleInputChange}
                       placeholder="Full Name"
                       required
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      className="w-full bg-black pl-10 pr-4 py-2 border border-[#27272a] rounded-lg focus:ring-2 focus:ring-[#AB20FD] focus:border-[#AB20FD] outline-none transition-colors text-zinc-50"
                     />
                   </div>
 
@@ -258,7 +253,7 @@ const Form = () => {
                       onChange={handleInputChange}
                       placeholder="Email"
                       required
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      className="w-full bg-black pl-10 pr-4 py-2 border border-[#27272a] rounded-lg focus:ring-2 focus:ring-[#AB20FD] focus:border-[#AB20FD] outline-none transition-colors text-zinc-50"
                     />
                   </div>
 
@@ -271,7 +266,7 @@ const Form = () => {
                       onChange={handleInputChange}
                       placeholder="Password"
                       required
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      className="w-full  bg-black pl-10 pr-4 py-2 border border-[#27272a] rounded-lg focus:ring-2 focus:ring-[#AB20FD] focus:border-[#AB20FD] outline-none transition-colors text-zinc-50"
                     />
                   </div>
                 </div>
@@ -279,7 +274,7 @@ const Form = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+                  className="w-full bg-[#AB20FD] text-white py-2 rounded-lg hover:bg-[#AB20FD] transition-colors disabled:opacity-50"
                 >
                   {isLoading ? "Creating account..." : "Create account"}
                 </button>
@@ -287,24 +282,21 @@ const Form = () => {
             </form>
           )}
         </div>
-
-        
         <div className="mt-8 grid grid-cols-3 gap-4 text-center text-sm">
           <div className="flex flex-col items-center">
-            <TrendingUp className="h-6 w-6 text-blue-600 mb-2" />
-            <p className="text-gray-600">Advanced Analytics</p>
+            <TrendingUp className="h-6 w-6 text-white mb-2" />
+            <p className="text-[#a1a1aa]">Advanced Analytics</p>
           </div>
           <div className="flex flex-col items-center">
-            <LineChart className="h-6 w-6 text-blue-600 mb-2" />
-            <p className="text-gray-600">Real-time Tracking</p>
+            <LineChart className="h-6 w-6 text-white mb-2" />
+            <p className="text-[#a1a1aa]">Real-time Tracking</p>
           </div>
           <div className="flex flex-col items-center">
-            <Lock className="h-6 w-6 text-blue-600 mb-2" />
-            <p className="text-gray-600">Secure Platform</p>
+            <Lock className="h-6 w-6 text-white mb-2" />
+            <p className="text-[#a1a1aa]">Secure Platform</p>
           </div>
         </div>
 
-        
         {error && (
           <div className="mt-4 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg">
             {error}
@@ -312,9 +304,6 @@ const Form = () => {
         )}
 
         
-        <div className="mt-8 text-xs text-gray-500">
-          <p>Registered Users: {registeredUsers.length}</p>
-        </div>
       </div>
     </div>
   );

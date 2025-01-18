@@ -65,7 +65,7 @@ const Dashboard = () => {
 
         {/* Third Row: Footer */}
         <div className="w-full p-6 bg-[#1a1a1a] text-white text-center rounded-lg">
-          Full Width Row 3
+          Calendar
         </div>
       </div>
     </div>
