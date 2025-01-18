@@ -2,6 +2,8 @@ import Sidebar from "./Sidebar";
 import React from "react";
 import Card from "./Card";
 import BarChartComponent from "./BarChartComponent";
+import NetDailyPnL from "./NetDailyPnL";
+import ProfitLossCalendar from "./ProfitLossCalendar";
 
 const Dashboard = () => {
   return (
@@ -58,14 +60,14 @@ const Dashboard = () => {
           <div className="w-full h-96 bg-[#1a1a1a] rounded-lg">
             <BarChartComponent />
           </div>
-          <div className="w-full h-96 bg-[#1a1a1a] rounded-lg">
-            {/* Additional chart or content can go here */}
+          <div className="w-full  bg-[#1a1a1a] rounded-lg">
+          <NetDailyPnL />
           </div>
         </div>
 
         {/* Third Row: Footer */}
-        <div className="w-full p-6 bg-[#1a1a1a] text-white text-center rounded-lg">
-          Calendar
+        <div className="w-full p-6  text-white text-center rounded-lg">
+        <ProfitLossCalendar />
         </div>
       </div>
     </div>

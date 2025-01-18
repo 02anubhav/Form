@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { LineChart, TrendingUp, Lock, Mail, User } from "lucide-react";
-
+ 
 const Form = () => {
   const [activeTab, setActiveTab] = useState("login");
   const [isLoading, setIsLoading] = useState(false);
@@ -119,9 +119,8 @@ const Form = () => {
     <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          {/* <div className="flex items-center justify-center mb-4">
-            <LineChart className="h-12 w-12 text-blue-600" />
-          </div> */}
+       
+  
           <h1 className="text-2xl font-bold text-white">TradyLytics</h1>
           <p className="text-[#a1a1aa] mt-2">Trade. Analyze. Elevate.</p>
         </div>
@@ -302,8 +301,6 @@ const Form = () => {
             {error}
           </div>
         )}
-
-        
       </div>
     </div>
   );
