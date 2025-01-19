@@ -4,6 +4,8 @@ import Card from "./Card";
 import BarChartComponent from "./BarChartComponent";
 import NetDailyPnL from "./NetDailyPnL";
 import ProfitLossCalendar from "./ProfitLossCalendar";
+import RootLayout from "./RootLayout";
+
 
 const Dashboard = () => {
   return (
@@ -13,15 +15,15 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 w-full">
         {/* Header */}
         <header className="pl-6 pt-4 pb-2  w-full border-b border-[#27272a]">
-          <h1 className="text-2xl font-bold  text-white">Dashboard</h1>
-          <p className="text-zinc-50 text-sm">
+          <h1 className="text-2xl font-bold ml-8 text-white">Dashboard</h1>
+          <p className="text-zinc-50 ml-8 text-sm">
             Welcome to your trading overview
           </p>
         </header>
 
         {/* First Row: Cards */}
-        <div className="p-4 w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="p-4  flex flex-col items-center    w-full">
+          <div className="grid grid-cols-1   sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <Card
               title="Win Rate"
               value="65%"
@@ -60,14 +62,16 @@ const Dashboard = () => {
           <div className="w-full h-96 bg-[#1a1a1a] rounded-lg">
             <BarChartComponent />
           </div>
-          <div className="w-full  bg-[#1a1a1a] rounded-lg">
-          <NetDailyPnL />
+          <div className="w-full bg-[#1a1a1a] rounded-lg">
+            <NetDailyPnL />
           </div>
         </div>
 
         {/* Third Row: Footer */}
-        <div className="w-full p-6  text-white text-center rounded-lg">
-        <ProfitLossCalendar />
+        <div className="w-full ">
+          <RootLayout>
+            <ProfitLossCalendar />
+          </RootLayout>
         </div>
       </div>
     </div>

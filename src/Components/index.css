@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rbc-calendar {
+  min-height: 600px;
+}
+
+.rbc-month-view {
+  border: none;
+}
+
+.rbc-header {
+  padding: 10px 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rbc-date-cell {
+  padding: 5px;
+  text-align: center;
+}
+
+.rbc-off-range-bg {
+  background-color: #f3f4f6;
+}
+
+.profit-day,
+.loss-day {
+  font-weight: bold;
+}
+
+.profit-day:hover {
+  background-color: rgba(0, 255, 0, 0.2) !important;
+}
+
+.loss-day:hover {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+}

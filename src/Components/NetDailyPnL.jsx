@@ -25,17 +25,17 @@ function CustomTooltip({ active, payload }) {
 
 function NetDailyPnL() {
   return (
-    <div className="p-4  bg-black border-[#27272a] border shadow-md rounded-md">
-      <header className="mb-4">
+    <div className="p-4 bg-black  border-[#27272a] border shadow-md rounded-md">
+      <header className="mb-4 p-4">
         <h2 className="text-lg text-zinc-50 font-bold">Net Daily PnL</h2>
         <p className="text-sm text-gray-500">Track performance over time</p>
       </header>
-      <div className="w-full h-80">
+      <div className="w-full h-80 border-pink-500">
         <LineChart
           data={netDailyPnL}
-          width={480}
+          width={450}
           height={300}
-          margin={{ top: 20, right: 35, left: 5, bottom: 20 }}
+          margin={{ top: 20, right: 70, left: 5, bottom: 10 }}
         >
           <CartesianGrid stroke="#e2e8f0" vertical={false} />
           <XAxis

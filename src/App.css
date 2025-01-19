@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Typing effect for button text */
+@keyframes typingButton {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor for button text */
+@keyframes blinkButton {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-typing-button {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #7d12ff;
+  animation: typingButton 3.5s steps(22, end) infinite, blinkButton 0.6s step-end infinite;
+  display: inline-block;
+}
